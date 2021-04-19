@@ -1,0 +1,11 @@
+---
+- name: Playbook to install Nginx module
+  hosts: ec2
+  become: yes
+  
+  tasks:
+  - name: Install Nginx module
+    apt:
+     name: nginx-core
+     state: latest
+...

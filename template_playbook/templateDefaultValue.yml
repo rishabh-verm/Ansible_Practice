@@ -1,0 +1,12 @@
+---
+  - name: Playbook for template using default value in case of undefined variables
+    hosts: localhost
+    vars:
+     mode: 0777
+
+    tasks:
+      - name: Just making a file using template module
+        template:
+         src: /home/knoldus/Devops/Ansible/templates/defaultvalue.j2
+         dest: /home/knoldus/template output/Output_templateDefaultValue
+         mode: "{{ mode | default(omit) }}"

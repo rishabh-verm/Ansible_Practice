@@ -1,0 +1,21 @@
+---
+  - name: Playbook to show dict to list and list to dict variable conversion
+    hosts: localhost
+    vars:
+      dict:
+        name: Rishabh
+        Age: 22
+      
+      items_Technologies:
+        - name: Rishabh
+          technology: Java
+        - name: Shivam
+          technology: Devops
+        - name: Akash
+          technology: Scala
+
+    tasks:
+      - name: Creating file
+        template:
+         src: /home/knoldus/Devops/Ansible/templates/managingDataTypeTemplate.j2
+         dest: /home/knoldus/template output/output_ManagingDataType

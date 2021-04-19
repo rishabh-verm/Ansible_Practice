@@ -1,0 +1,17 @@
+---
+- name: This is playbook to demonstrate working of conditionals
+  hosts: ec2
+  
+  tasks:
+  - name: Task to create file "file1.txt" when condition is true
+    copy:
+     dest: file1.txt
+     content: "Hey this file is created after successful completion of when expression"
+    when: false
+    
+  - name: Task to create file "file2.txt" when condition is true
+    copy:
+     dest: file2.txt
+     content: "Hey this file is created after successful completion of when expression"
+    when: true
+...

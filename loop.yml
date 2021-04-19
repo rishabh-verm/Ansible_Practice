@@ -1,0 +1,12 @@
+---
+- name: Playbook to show loops
+  hosts: ec2
+  
+  tasks:
+  - name: This will create 3 dirctories on desktop.
+    command: mkdir ""{{ item }}""
+    with_items:
+    - dir4
+    - dir5
+    - dir6
+...

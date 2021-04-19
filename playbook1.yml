@@ -1,0 +1,10 @@
+---
+- name: Playbook1
+  hosts: ec2
+  become: yes
+
+  tasks:
+   - name: Update all packages to the latest version
+     apt:
+      upgrade: dist
+...

@@ -1,0 +1,11 @@
+---
+- name: Playbook to show working of variable
+  hosts: localhost
+  vars:
+   My_content: "This file is created using variable concept"
+  tasks:
+  - name: Task to create file "var_file.txt" and add content.
+    copy:
+     dest: var_file.txt
+     content: "{{ My_content }}"
+...

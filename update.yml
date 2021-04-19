@@ -1,0 +1,12 @@
+---
+- name: Playbook for updating cache
+  hosts: localhost
+  become: yes
+  vars:
+   ansible_sudo_pass: "knoldus"
+  
+  tasks:
+  - name: Updating cache
+    apt: update_cache=yes
+...
+

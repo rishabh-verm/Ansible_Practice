@@ -1,0 +1,12 @@
+---
+- name: Playbook for installing apache and showing "become" commands.
+  hosts: ec2
+  
+  tasks:
+  - name: Install apache on ec2
+    apt:
+     name: apache2
+     update_cache: yes
+     state: latest 
+  become: yes
+...

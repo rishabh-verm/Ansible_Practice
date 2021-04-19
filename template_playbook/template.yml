@@ -1,0 +1,20 @@
+---
+  - name : Playbook for showing templates
+    hosts: localhost
+    vars:
+      variable1: 'Hello rishabh'
+      variable2: 'see ya boy!!'
+      ansible_sudo_pass: "knoldus"
+
+    tasks:
+      - name: Basic template example
+        template:
+          src: /home/knoldus/Devops/Ansible/templates/example1.j2
+          dest: /home/knoldus/template output/output.txt
+          #set permissions through templates
+          owner: knoldus
+          group: knoldus
+          mode: 0600
+        become: true
+        
+...
