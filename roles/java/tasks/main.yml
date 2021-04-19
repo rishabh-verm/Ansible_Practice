@@ -1,0 +1,8 @@
+---
+- name: Install java
+  apt:
+    name: "{{ name }}"
+    state: present
+    update_cache: yes
+  become: yes
+# tasks file for java
