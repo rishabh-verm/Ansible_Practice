@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Running update.yml') {
             steps {
-                echo 'Hello World'
+                sh 'ansible-playbook update.yml'
             }
         }
     }
