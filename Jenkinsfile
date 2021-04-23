@@ -1,14 +1,11 @@
-playbook {
-    agents any
+pipeline {
+    agent any
+
     stages {
-
-        stage ('Running update.yml file') {
-
+        stage('Running update.yml') {
             steps {
-
-                sh 'ansible-playbook update.yml'
+                echo 'Hello World'
             }
         }
     }
-
 }
